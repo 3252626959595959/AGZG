@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Electrónica</title>
+
+    <link rel="stylesheet" href="miestilo.css/estilo.css">
+</head>
+<body>
+
+<header>
+    <center><h1><big>ShopTech Pro</big></h1>
+    <h2>Los mejores productos al mejor precio</h2></center>
+    
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>  
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="Favoritos.html">Favoritos</a></li>
+        <li><a href="Mis Compras.html">Mis Compras</a></li>
+    </ul>
+</nav>
+
+<div class="busqueda">
+    <input type="text" id="buscador" placeholder="Buscar producto..." height="20" width="15"> 
+</div>
+
+<section class="contenedor">
+
+    <div class="producto">
+       <img src="img/Alexa con sonido vibrante.jpg">
+        <h2><p>Alexa con sonido vibrante.</p></h2>
+        <p class="precio">$2,500</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/audifonos.jpg">
+        <h2><p>Audífonos Inalambricos.</p></h2>
+        <p class="precio">$900</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/laptop.jpg">
+        <h2><p>Laptop HP Gamer.</p></h2>
+        <p class="precio">$30,000</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/mezcladora.jpg">
+        <h2><p>Mezcladora Electronica.</p></h2>
+        <p class="precio">$9,000</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/proyector.jpg">
+        <h2><p>Proyector Inteligente.</p></h2>  
+        <p class="precio">$4,990</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/Regulador Electrónico de Voltaje  con 6 Tomas reguladas.jpg">
+        <h2><p>Regulador de voltaje.</p></h2>
+        <p class="precio">$980</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/XIAOMI Redmi Watch 5 Active Negro  Smartwatch Pantalla LCD 2.jpg">
+        <h2><p>Smartwatch Xiaomi Redmi.</p></h2>
+        <p class="precio">$10,000</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/Freidora Digital.jpg">
+        <h2><p>Freidora Digital Electronica.</p></h2>
+        <p class="precio">$4,990</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/Funda De Iphone 14.jpg">
+        <h2><p>Funda de iPhone 14.</p></h2>
+        <p class="precio">$490</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/Mouse Inalambrico.jpg">
+        <h2><p>Mouse inalámbrico</p></h2>
+        <p class="precio">$850</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/teclado.jpg">
+        <h2><p>Teclado gamer inalámbrico</p></h2>
+        <p class="precio">$650</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="img/monitor.jpg">
+        <h2><p>Monitor gamer Odissey G3 </p></h2>
+        <p class="precio">$18,500</p>
+        <button>Comprar</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Tienda Electrónica - Todos los derechos reservados</p>
+</footer>
+
+<script>
+const buscador = document.getElementById("buscador");
+const productos = document.querySelectorAll(".producto");
+
+buscador.addEventListener("keyup", function() {
+    const texto = buscador.value.toLowerCase();
+
+    productos.forEach(producto => {
+        const nombre = producto.innerText.toLowerCase();
+
+        if (nombre.includes(texto)) {
+            producto.style.display = "block";
+        } else {
+            producto.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
